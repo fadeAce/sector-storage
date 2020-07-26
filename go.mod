@@ -1,6 +1,6 @@
 module github.com/filecoin-project/sector-storage
 
-go 1.13
+go 1.14
 
 require (
 	github.com/detailyang/go-fallocate v0.0.0-20180908115635-432fa640bd2e
@@ -32,3 +32,4 @@ require (
 )
 
 replace github.com/filecoin-project/filecoin-ffi => ./extern/filecoin-ffi
+replace github.com/filecoin-project/specs-storage v0.1.1-0.20200622113353-88a9704877ea => ./
