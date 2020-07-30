@@ -171,10 +171,10 @@ func (sb *Sealer) AddPiece(ctx context.Context, sector abi.SectorID, existingPie
 	if err != nil {
 		return abi.PieceInfo{}, err
 	}
-
+	cid, _ := commcid.PieceCommitmentV1ToCID(commp)
 	return abi.PieceInfo{
 		Size:     pieceSize.Padded(),
-		PieceCID: commcid.PieceCommitmentV1ToCID(commp),
+		PieceCID: cid,
 	}, nil
 }
 
